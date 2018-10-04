@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import sun.misc.Launcher;
 
 public class Main extends Application {
-    public static int duracion=20000;
+    public static int duracion=30000;
     public static int steps=1;
 
     @Override
