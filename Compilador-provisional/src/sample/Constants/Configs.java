@@ -82,6 +82,9 @@ public static final String UserName="";
         spansBuilder.add(Collections.emptyList(), text.length() - lastKwEnd);
         return spansBuilder.create();
     }
+    public static String[] EXPRESIONES={
+      "[A-Za-z]{1,3}"
+    };
 
 
 }
