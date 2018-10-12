@@ -16,7 +16,7 @@ public static final String UserName="";
             "extender","Fiin","Flott","Si","Implementar","Importar","Ent",
             "Nuevo","paquete","privado","protegido","publico","regresar",
             "Corto","static","cambiar","Estt","lanzar","intento","void",
-            "Mientras"
+            "Mientras","Convertir", "a"
     };
 
     public static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
@@ -38,26 +38,7 @@ public static final String UserName="";
     );
 
     public static final String sampleCode = String.join("\n", new String[]{
-            "package com.example;",
-            "",
-            "import java.util.*;",
-            "",
-            "public class Foo extends Bar implements Baz {",
-            "",
-            "    /*",
-            "     * multi-line comment",
-            "     */",
-            "    public static void main(String[] args) {",
-            "        // single-line comment",
-            "        for(String arg: args) {",
-            "            if(arg.length() != 0)",
-            "                System.out.println(arg);",
-            "            else",
-            "                System.err.println(\"Warning: empty string as argument\");",
-            "        }",
-            "    }",
-            "",
-            "}"
+        "Tipo de dato: "
     });
 
    public static StyleSpans<Collection<String>> computeHighlighting(String text) {
@@ -83,7 +64,7 @@ public static final String UserName="";
         return spansBuilder.create();
     }
     public static String[] EXPRESIONES={
-      "[A-Za-z]{1,3}"
+
     };
 
 

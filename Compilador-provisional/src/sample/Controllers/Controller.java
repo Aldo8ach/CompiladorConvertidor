@@ -73,17 +73,26 @@ compilar();
 public void compilar(){
         txtconsola.setText("");
         long tinicial=System.currentTimeMillis();
-
         String texto=codeArea.getText();
         String[] renglones=texto.split("\\n");
+
         for(int x=0;x<renglones.length; x++){
-            for(int y=0;y< Configs.EXPRESIONES.length;y++){
-                Pattern patron=Pattern.compile(Configs.EXPRESIONES[y]);
-                Matcher matcher=patron.matcher(renglones[x]);
-                if(!matcher.matches()){
+            boolean bandera=false;
+            if(!renglones[x].trim().equals("")){
+
+                for(int y=0;y< Configs.EXPRESIONES.length && bandera==false;y++){
+                    Pattern patron=Pattern.compile(Configs.EXPRESIONES[y]);
+                    Matcher matcher=patron.matcher(renglones[x]);
+                    if(matcher.matches()){
+                        bandera=true;
+                    }
+                }//llave for y
+                if(bandera==false){
                     txtconsola.setText(txtconsola.getText()+ " \n "+ "Error de sintaxis en la linea" +(x+1));
                 }
-            }//llave for y
+
+            }
+
         }//llave for x}
     long tfinal=System.currentTimeMillis()-tinicial;
         txtconsola.setText(txtconsola.getText()+"\n"+"Compilado en : " + tfinal + " milisegundos ");
