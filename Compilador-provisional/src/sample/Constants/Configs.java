@@ -38,7 +38,7 @@ public static final String UserName="";
     );
 
     public static final String sampleCode = String.join("\n", new String[]{
-        "Tipo de dato: "
+        "Tipo de dato:"
     });
 
    public static StyleSpans<Collection<String>> computeHighlighting(String text) {
@@ -64,7 +64,13 @@ public static final String UserName="";
         return spansBuilder.create();
     }
     public static String[] EXPRESIONES={
-
+           "Tipo de dato: Binario (\\d+)?[A-Za-z][\\w+]*[=][0-1]{1,}",
+            "Tipo de dato: Decimal (\\d+)?[A-Za-z][\\w+]*[=]\\d{1,}",
+            "Tipo de dato: Hexadecimal (\\d+)?[A-Za-z][\\w+]*[=][A-Fa-f0-9]{1,}",
+            "Tipo de dato: Octal (\\d+)?[A-Za-z][\\w+]*[=][0-7]{1,}",
+            "Tipo de dato: Resultado (\\d+)?[A-Za-z][\\w+]",
+            "(\\d+)?[A-Za-z][\\w+]*[=]Convertir (\\d+)?[A-Za-z][\\w+]* a (\\d+)?[A-Za-z][\\w+]*",
+            "(\\d+)?[A-Za-z][\\w+]*.mostrar"
     };
 
 
