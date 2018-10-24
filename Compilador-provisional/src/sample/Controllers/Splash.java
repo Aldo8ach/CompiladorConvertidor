@@ -22,21 +22,21 @@ public class Splash extends Preloader {
     //se genera con con al+insert
     @Override
     public void handleStateChangeNotification(StateChangeNotification info) {
-       StateChangeNotification.Type type=info.getType();
-       switch(type){
-           case BEFORE_START:{
-               stage.hide();
-               break;
-           }//llave case
-       }//llave switch
+        StateChangeNotification.Type type=info.getType();
+        switch(type){
+            case BEFORE_START:{
+                stage.hide();
+                break;
+            }//llave case
+        }//llave switch
     }
 
     @Override
     public void handleApplicationNotification(PreloaderNotification info) {
-       if (info instanceof  ProgressNotification){
-           lblprogress.setText(((ProgressNotification)info).getProgress()+"%");
-           barra.setProgress(((ProgressNotification)info).getProgress()/100);
-       }//llaveeeeeeeeeeeeee IFFFFFFF
+        if (info instanceof  ProgressNotification){
+            lblprogress.setText(((ProgressNotification)info).getProgress()+"%");
+            barra.setProgress(((ProgressNotification)info).getProgress()/100);
+        }//llaveeeeeeeeeeeeee IFFFFFFF
     }
 
     @Override
@@ -46,8 +46,8 @@ public class Splash extends Preloader {
             public void run() {
                 Parent root2;
                 try{
-                 root2= FXMLLoader.load(getClass().getResource("../Views/splash.fxml"));
-                 scene=new Scene(root2,600,400);
+                    root2= FXMLLoader.load(getClass().getResource("../Views/splash.fxml"));
+                    scene=new Scene(root2,430,289);
 
                 }catch (IOException e){
                     e.printStackTrace();
@@ -58,12 +58,14 @@ public class Splash extends Preloader {
 
     @Override
     public void start(Stage stage) throws Exception {
-     this.stage=stage;
-     this.stage.initStyle(StageStyle.UNDECORATED);
-     this.stage.setScene(scene);
-     this.stage.show();
-     lblprogress=(Label)scene.lookup("#lblprog");
-     barra=(ProgressBar)scene.lookup("#prog");
+        this.stage=stage;
+        this.stage.initStyle(StageStyle.UNDECORATED);
+        this.stage.setScene(scene);
+        this.stage.show();
+        lblprogress=(Label)scene.lookup("#lblprog");
+        barra=(ProgressBar)scene.lookup("#prog");
 
     }
 }
+
+

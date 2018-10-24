@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.Controllers.Splash;
 
@@ -25,7 +26,10 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Views/principal.fxml"));
         primaryStage.setTitle("Numerics");
         primaryStage.setScene(new Scene(root, 960, 600));
+        primaryStage.setTitle("Convertidor de Sistemas Numéricos");
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream( "../Imagenes/ICONITO.png")));
         primaryStage.show();
+        primaryStage.setResizable(false);
     }
 
 
