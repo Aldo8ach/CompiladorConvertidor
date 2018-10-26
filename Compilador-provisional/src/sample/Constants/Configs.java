@@ -70,7 +70,8 @@ public static final String UserName="";
             "Tipo de dato: Octal (\\d+)?[A-Za-z][\\w+]*[=][0-7]{1,}",
             "Tipo de dato: Resultado (\\d+)?[A-Za-z][\\w+]",
             "(\\d+)?[A-Za-z][\\w+]*[=]Convertir (\\d+)?[A-Za-z][\\w+]* a (\\d+)?[A-Za-z][\\w+]*",
-            "(\\d+)?[A-Za-z][\\w+]*.mostrar"
+            "(\\d+)?[A-Za-z][\\w+]*.mostrar",
+            "(\\/\\/)|(\\/\\/((\\w+\\s+)+|(\\w+))(\\w+|\\w+\\s+))$"
     };
 
 
